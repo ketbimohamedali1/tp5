@@ -1,0 +1,173 @@
+/* ==============================
+   ÉTAPE 3 : LES FONDS
+   ============================== */
+
+/* Corps de la page */
+body {
+    background-color: #EEF2FF;
+    background-image: url("../images/motif.png");
+    background-repeat: repeat;
+    background-attachment: fixed;
+}
+
+/* Bannière */
+.banniere {
+    background-color: #1B2A9E;
+    background-image: url("../images/banniere.png");
+    background-repeat: no-repeat;
+    background-position: 90% 50%;
+    background-size: 270px 180px;
+}
+
+
+/* ==============================
+   ÉTAPE 4 : FLEXBOX
+   ============================== */
+
+/* En-tête */
+.entete {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}
+
+/* Bloc du titre */
+.titre-bloc {
+    flex: 1;
+}
+
+/* Menu de navigation */
+.menu {
+    display: flex;
+    gap: 10px;
+}
+
+/* Informations des cartes */
+.infos {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Badge de niveau */
+.niveau {
+    align-self: flex-start;
+}
+
+/* Partie haute du pied de page */
+.pied-haut {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+/* Marque du club */
+.marque {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+/* Liens du pied de page */
+.liens-pied {
+    display: flex;
+    gap: 22px;
+}
+
+
+/* ==============================
+   ÉTAPE 5 : GRID
+   ============================== */
+
+/* Grille des six ateliers */
+.grille-ateliers {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+}
+
+/* Carte vedette : 2 colonnes et 2 lignes */
+.vedette {
+    grid-column: span 2;
+    grid-row: span 2;
+}
+
+/* Grille des médias */
+.grille-medias {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-areas:
+        "video audio"
+        "plan plan";
+    gap: 24px;
+}
+
+/* Zone de la vidéo */
+.video {
+    grid-area: video;
+}
+
+/* Zone de l'audio */
+.audio {
+    grid-area: audio;
+}
+
+/* Zone du plan */
+.plan {
+    grid-area: plan;
+}
+
+
+/* ==============================
+   ÉTAPE 6 : TABLEAU DU PLANNING
+   ============================== */
+
+/* Tableau */
+.planning {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: white;
+}
+
+/* Légende sous le tableau */
+.planning caption {
+    caption-side: bottom;
+    padding-top: 10px;
+    font-weight: bold;
+    font-style: italic;
+    color: #5B6BA8;
+}
+
+/* Cellules d'en-tête et de données */
+.planning th,
+.planning td {
+    padding: 12px 16px;
+    border-bottom: 1px solid #DCE3FB;
+    text-align: left;
+}
+
+/* En-têtes du tableau */
+.planning thead th {
+    color: white;
+    background-color: #1B2A9E;
+}
+
+/* Lignes paires du corps du tableau */
+.planning tbody tr:nth-child(even) {
+    background-color: #F4F7FF;
+}
+
+/* Couleur au survol des lignes */
+.planning tbody tr:hover {
+    background-color: #E3E8FF;
+}
+
+/* Dernière cellule de chaque ligne, en-têtes compris */
+.planning tr th:last-child,
+.planning tr td:last-child {
+    text-align: center;
+}
+
+/* Cellules du pied du tableau */
+.planning tfoot td {
+    font-weight: bold;
+}
